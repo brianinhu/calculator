@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 62.5%; /* Para poder usar los REM mucho mas fácil */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 500px; /* ancho */
+    border: 1px solid gray;
+    font-size: 2rem;
+}
+
+.calculator-display {
+    padding: 25px 15px; 
+    width: 100%; /* Para que sea del ancho de la calculadora */
+    text-align: right; /* El cero a la derecha */
+    border: 1px solid gray;
+    overflow-x: auto; /* Si se colapsa de numeros, en vez que se rebalsn, que se oculten y se agregen para seguir viendolos */
+}
+
+.calculator-keypad {
+    display: flex;
+    width: 100%;
+}
+
+.keypad-numbers {
+   display: flex;
+   width: 100%;
+   flex-wrap: wrap; /* Cuando los botones superen el ancho de 500px, se arme una nueva fila de abajo para agregar hasta que se acaben los botones */
+}
+
+.keypad-button {
+    width: 25%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer; /* El cursor cambia a pointer al poner encima */
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.keypad-button:hover { /* Para hacer el efecto de oscurecer el cuadro al poner el cursos encima */
+    filter: brightness(80%);
+    transition: filter .25s;
+} 
+
+.keypad-button.yellow {
+    background-color: yellow;
+}
+
+.keypad-button.large {
+    width: 50%; /* asi mide el doble del boton predeterminado */
+}
+
